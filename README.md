@@ -2,7 +2,7 @@
 
 ## Overview
 
-\_**Portfolio** Showcasing my projects and resume to future employees
+\_**Portfolio** Showcasing my projects and resume to future employers and clients
 
 <br>
 
