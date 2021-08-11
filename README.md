@@ -2,7 +2,7 @@
 
 ## Overview
 
-\_**Portfolio** Showcasing my projects and resume to future employers and clients
+**Portfolio** Showcasing my projects and resume to future employers and clients
 
 <br>
 
@@ -11,34 +11,22 @@
 #### - Back End:
 
 - Build a Ruby on Rails server
-- utilize RESTful JSON endpoints
-- Incorporate at least 1 association
 - Full CRUD functionality
-- Incorporate user authentication
+- Add user authentication
 
 #### - Front End:
 
 - Built with React
-- Consume from my Ruby on Rails API
-- Render data using functional and class React components
-- Utilize React Router for client side routing
 - Full CRUD functionality
+- add endorsments
 
 #### - Styling
 
-- Styled with CSS:
 - Implementation of at least 2 media queries
-
-#### - Deployment
-
-- Fully functioning deployed front-end
-- Fully functioning deployed back-end via Heroku
 
 <br>
 
 ### Libraries and Dependencies
-
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
 |   Library    | Description            |
 | :----------: | :--------------------- |
@@ -46,7 +34,7 @@
 | React Router | npm i react-router-dom |
 |    axios     | npm i axios            |
 |     JWT      | gem 'jwt'              |
-|    Bcrypt    | gem bycrypt            |
+|    Bcrypt    | gem 'bcrypt'           |
 
 <br>
 

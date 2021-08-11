@@ -1,0 +1,2 @@
+class Endorsment < ApplicationRecord
+end
