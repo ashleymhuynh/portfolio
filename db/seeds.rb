@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Admin.destroy_all
+Comments.destroy_all
+Project.destroy_all
 
 
 
@@ -19,6 +21,6 @@ community_table = Project.create(project_title: "Community Table", about: "A sig
 pp "#{Project.count} projects created"
 
 
-endorsment1 = Endorsment.create(name: "Loki", content: "Best fur mom ever!", is_approved: false);
+comment1 = Comments.create(name: "Loki", content: "Best fur mom ever!", is_approved: false);
 
-pp "#{Endorsment.count} endorsments created"
+pp "#{Comments.count} comment created"
