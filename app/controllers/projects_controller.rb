@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   before_action :authorize_request, only: [:create, :update, :destroy]
 
   def index
-    projects = Projects.all
+    projects = Project.all
     render json: projects
   end
 
