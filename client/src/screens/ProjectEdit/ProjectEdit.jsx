@@ -7,6 +7,7 @@ import {
 } from "../../services/projects";
 import { useParams, Redirect } from "react-router-dom";
 import "./ProjectEdit.css";
+import { verifyAdmin } from "../../services/admin";
 
 const ProjectEdit = (props) => {
   const [project, setProject] = useState({
@@ -19,15 +20,22 @@ const ProjectEdit = (props) => {
   });
 
   const [isUpdated, setUpdated] = useState(false);
+
   let { id } = useParams();
 
+  const [adminVerified, setAdminVerified] = useState(null);
   useEffect(() => {
     const fetchProject = async () => {
       const project = await getProject(id);
       setProject(project);
     };
+    const checkAdmin = async () => {
+      const adminExist = await verifyAdmin();
+      setAdminVerified(adminExist ? true : false);
+    };
+    checkAdmin();
     fetchProject();
-  }, [id]);
+  }, [id, adminVerified]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getProjects } from "../../services/projects";
+import { verifyAdmin } from "../../services/admin";
 import Project from "../../components/Project/Project";
 import Layout from "../../components/Layout/Layout";
 import "./Projects.css";
@@ -18,12 +19,21 @@ const Projects = (props) => {
     fetchProjects();
   }, []);
 
+  const [adminVerified, setAdminVerified] = useState(null);
+  useEffect(() => {
+    const checkAdmin = async () => {
+      const adminExist = await verifyAdmin();
+      setAdminVerified(adminExist ? true : false);
+    };
+    checkAdmin();
+  }, []);
+
   return (
     <Layout admin={props.admin}>
       <div className="Projects">
         <h1>Projects</h1>
         <div className="add">
-          {admin ? (
+          {adminVerified ? (
             <Link to={`/newproject`}>
               <button className="add-button">New Project</button>
             </Link>

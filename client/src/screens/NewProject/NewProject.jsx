@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Redirect } from "react-router";
+
 import { newProject } from "../../services/projects";
 import Layout from "../../components/Layout/Layout";
 import "./NewProject.css";
@@ -15,8 +16,6 @@ const NewProject = (props) => {
     admin_id: 1,
   });
 
-  const [isNew, setIsNew] = useState(false);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setProject({
@@ -25,6 +24,9 @@ const NewProject = (props) => {
       admin_id: 1,
     });
   };
+
+  const [isNew, setIsNew] = useState(false);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     const newP = await newProject(project);

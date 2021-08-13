@@ -17,6 +17,7 @@ const ProjectDetail = (props) => {
       setProject(project);
       setLoaded(true);
     };
+
     fetchProject();
   }, [id]);
 
