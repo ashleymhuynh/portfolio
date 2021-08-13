@@ -1,23 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import { Redirect, Route, Switch } from "react-router-dom";
+import { useState, useEffect } from "react";
+import LandingPage from "./screens/LandingPage/LandingPage";
+import Home from "./screens/Home/Home";
+import Projects from "./screens/Projects/Projects";
+import ProjectDetail from "./screens/ProjectDetail/ProjectDetail";
+import ProjectEdit from "./screens/ProjectEdit/ProjectEdit";
+import NewProject from "./screens/NewProject/NewProject";
+import Login from "./screens/Login/Login";
+
+import "./App.css";
+
+import { verifyAdmin } from "./services/admin";
 
 function App() {
+  const [admin, setAdmin] = useState(null);
+
+  useEffect(() => {
+    const fetchAdmin = async () => {
+      const admin = await verifyAdmin();
+      setAdmin(admin ? admin : null);
+    };
+    fetchAdmin();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Switch>
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/home" component={Home} />
+        {/* <Route exact path="/biography" component={Biography} /> */}
+        <Route exact path="/projects">
+          <Projects admin={admin} />
+        </Route>
+
+        <Route exact path="/projects/:id">
+          <ProjectDetail admin={admin} />
+        </Route>
+
+        {/* <Route exact path="/contact" component={Contact} /> */}
+
+        <Route exact path="/projects/:id/edit" component={ProjectEdit} />
+        {/* {admin ? <ProjectEdit admin={admin} /> : <Redirect to="/projects" />}
+        </Route> */}
+        <Route exact path="/newproject">
+          <NewProject admin={admin} />
+        </Route>
+        {/* <Route exact path="/admin/dashboard">
+          {admin ? <Dashboard admin={admin} /> : <Redirect to="/projects" />}
+        </Route> */}
+        <Route exact path="/login">
+          <Login setAdmin={setAdmin} />
+        </Route>
+      </Switch>
     </div>
   );
 }
