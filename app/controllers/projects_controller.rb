@@ -22,7 +22,7 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
-    if project.update(project_params)
+    if @project.update(project_params)
       render json: @project
     else
       render json: @project.errors, status: :unprocessable_entity
@@ -38,7 +38,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:project_title, :about, :github_url, :deploy_url, :image_url, :languages)
+    params.require(:project).permit(:project_title, :about, :github_url, :deploy_url, :image_url, :languages, :admin_id)
   end
 
   def get_project
