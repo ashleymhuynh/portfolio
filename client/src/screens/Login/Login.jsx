@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { login, verifyAdmin } from "../../services/admin";
+import { useState } from "react";
+import { login } from "../../services/admin";
 import { useHistory } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import "./Login.css";
@@ -8,7 +8,6 @@ const Login = (props) => {
   const history = useHistory();
   const { setAdmin } = props;
 
-  const [adminVerified, setAdminVerified] = useState(null);
   const [returnAdmin, setReturnAdmin] = useState({
     email: "",
     password: "",
@@ -24,12 +23,12 @@ const Login = (props) => {
     const admin = await login(returnAdmin);
     setAdmin(admin);
     setTimeout(() => {
-      history.push("/projects");
+      history.push("/dashboard");
     }, 200);
   };
 
   return (
-    <Layout adminVerified={adminVerified}>
+    <Layout>
       <div className="Login">
         <h1>Welcome back, Ashley! Please Login </h1>
         <form className="signin-form" onSubmit={logThePrincessIn}>

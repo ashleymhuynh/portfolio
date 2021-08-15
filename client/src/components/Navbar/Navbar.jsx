@@ -1,7 +1,29 @@
-// import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { verifyAdmin } from "../../services/admin";
+import { logout } from "../../services/admin";
+// import "./Navbar.css";
 
 const Navbar = (props) => {
+  const [adminVerified, setAdminVerified] = useState(null);
+  const history = useHistory();
+
+  useEffect(() => {
+    const checkAdmin = async () => {
+      const adminExist = await verifyAdmin();
+      setAdminVerified(adminExist ? true : false);
+    };
+    checkAdmin();
+  }, []);
+
+  const logoutAdmin = async () => {
+    await logout();
+    setTimeout(() => {
+      history.push("/home");
+    }, 200);
+  };
+
   return (
     <div className="Navbar">
       <NavLink className="logo" to="/home">
@@ -12,39 +34,30 @@ const Navbar = (props) => {
           width="200"
         />
       </NavLink>
-      <div id="menu-wrap">
-        <input type="checkbox" className="toggler" />
-        <div className="hamburger">
-          <div></div>
-        </div>
-        <div className="menu">
-          <div>
-            <div>
-              <ul>
-                <li>
-                  <NavLink className="link" to="/projects">
-                    Projects
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="link" to="/blog">
-                    Bleeding Ink
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="link" to="/biography">
-                    Biography
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink className="link" to="/contact">
-                    Contact
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <div className="menu">
+        <NavLink className="link" to="/projects">
+          Projects
+        </NavLink>
+
+        <NavLink className="link" to="/blog">
+          Bleeding Ink
+        </NavLink>
+
+        <NavLink className="link" to="/biography">
+          Biography
+        </NavLink>
+
+        <NavLink className="link" to="/contact">
+          Contact
+        </NavLink>
+        {adminVerified ? (
+          <>
+            <NavLink className="link" to="/dashboard">
+              Dashboard
+            </NavLink>
+            <span onClick={logoutAdmin}>Logout</span>
+          </>
+        ) : null}
       </div>
     </div>
   );

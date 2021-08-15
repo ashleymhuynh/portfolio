@@ -24,6 +24,7 @@ const ProjectEdit = (props) => {
   let { id } = useParams();
 
   const [adminVerified, setAdminVerified] = useState(null);
+
   useEffect(() => {
     const fetchProject = async () => {
       const project = await getProject(id);

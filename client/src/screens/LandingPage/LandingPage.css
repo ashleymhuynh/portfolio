@@ -1,0 +1,7 @@
+.Landingpage {
+  background: url("https://i.imgur.com/ebYi66s.png") no-repeat center center
+    fixed;
+  background-size: cover;
+  padding: 500px;
+  width: 100%;
+}

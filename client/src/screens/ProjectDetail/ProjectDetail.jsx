@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import Layout from "../../components/Layout/Layout";
 import { getProject } from "../../services/projects";
 import { useParams, Link } from "react-router-dom";
+import { verifyAdmin } from "../../services/admin";
 import "./ProjectDetail.css";
 
 const ProjectDetail = (props) => {
   const [project, setProject] = useState(null);
   const [isLoaded, setLoaded] = useState(null);
+  const [adminVerified, setAdminVerified] = useState(null);
   const { id } = useParams();
-
-  const { admin } = props;
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -21,15 +21,23 @@ const ProjectDetail = (props) => {
     fetchProject();
   }, [id]);
 
+  useEffect(() => {
+    const checkAdmin = async () => {
+      const adminExist = await verifyAdmin();
+      setAdminVerified(adminExist ? true : false);
+    };
+    checkAdmin();
+  }, []);
+
   if (!isLoaded) {
     return <h1 className="loading-message">Loading</h1>;
   }
 
   return (
-    <Layout admin={props.admin}>
+    <Layout>
       <div className="ProjectDetail">
-        <h2 className="header category">Projects</h2>
-        <h2 className="project_header">{project.project_title}</h2>
+        <h2 className="header-category">Projects</h2>
+        <h2 className="header">{project.project_title}</h2>
         <section className="detail">
           <div className="detail-image">
             <img
@@ -50,7 +58,7 @@ const ProjectDetail = (props) => {
           </div>
         </section>{" "}
         <div className="update-button">
-          {admin ? (
+          {adminVerified ? (
             <Link to={`/projects/${project.id}/edit`}>
               <button className="edit-button">Update</button>
             </Link>

@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { useState, useEffect } from "react";
 import LandingPage from "./screens/LandingPage/LandingPage";
 import Home from "./screens/Home/Home";
@@ -7,6 +7,9 @@ import ProjectDetail from "./screens/ProjectDetail/ProjectDetail";
 import ProjectEdit from "./screens/ProjectEdit/ProjectEdit";
 import NewProject from "./screens/NewProject/NewProject";
 import Login from "./screens/Login/Login";
+import Contact from "./screens/Contact/Contact";
+import Biography from "./screens/Biography/Biography";
+import Dashboard from "./screens/Dashboard/Dashboard";
 
 import "./App.css";
 
@@ -28,29 +31,25 @@ function App() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/home" component={Home} />
-        {/* <Route exact path="/biography" component={Biography} /> */}
-        <Route exact path="/projects">
-          <Projects admin={admin} />
-        </Route>
-
-        <Route exact path="/projects/:id">
-          <ProjectDetail admin={admin} />
-        </Route>
-
-        {/* <Route exact path="/contact" component={Contact} /> */}
-
-        <Route exact path="/projects/:id/edit" component={ProjectEdit} />
-        {/* {admin ? <ProjectEdit admin={admin} /> : <Redirect to="/projects" />}
-        </Route> */}
-        <Route exact path="/newproject">
-          <NewProject admin={admin} />
-        </Route>
-        {/* <Route exact path="/admin/dashboard">
-          {admin ? <Dashboard admin={admin} /> : <Redirect to="/projects" />}
-        </Route> */}
+        <Route exact path="/biography" component={Biography} />
+        <Route exact path="/contact" component={Contact} />
         <Route exact path="/login">
           <Login setAdmin={setAdmin} />
         </Route>
+
+        <Route exact path="/projects">
+          <Projects admin={admin} />
+        </Route>
+        <Route exact path="/projects/:id">
+          <ProjectDetail admin={admin} />
+        </Route>
+        <Route exact path="/projects/:id/edit">
+          {admin ? <ProjectEdit /> : <Redirect to="/projects/" />}
+        </Route>
+        <Route exact path="/newproject">
+          <NewProject admin={admin} />
+        </Route>
+        <Route exact path="/dashboard" component={Dashboard} />
       </Switch>
     </div>
   );

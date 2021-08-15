@@ -9,8 +9,6 @@ import "./Projects.css";
 const Projects = (props) => {
   const [projects, setProjects] = useState([]);
 
-  const { admin } = props;
-
   useEffect(() => {
     const fetchProjects = async () => {
       const allProjects = await getProjects();
@@ -31,15 +29,13 @@ const Projects = (props) => {
   return (
     <Layout admin={props.admin}>
       <div className="Projects">
-        <h1>Projects</h1>
+        <h1 className="header">Projects</h1>
         <div className="add">
           {adminVerified ? (
             <Link to={`/newproject`}>
               <button className="add-button">New Project</button>
             </Link>
-          ) : (
-            <div />
-          )}
+          ) : null}
         </div>
         <div id="projects-container">
           {projects.map((project) => {

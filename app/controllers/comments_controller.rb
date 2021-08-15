@@ -12,8 +12,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-    comment = Comments.new(endorsment_params)
-    if endorsment.save
+    comment = Comments.new(comment_params)
+    if comment.save
       render json: comment, status: :created
     else
       render json: comment.errors, status: :unprocessable_entity
@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
 
   def update
     @comment = Comments.find(params[:id])
-    if comment.update(comment_params)
+    if @comment.update(comment_params)
       render json: @comment
     else
       render json: @comment.errors, status: :unprocessable_entity
@@ -38,7 +38,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:endorsment).permit(:name, :content)
+    params.require(:comment).permit(:name, :content, :is_approved)
   end
 
   def get_comment
