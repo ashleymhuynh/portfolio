@@ -3,5 +3,6 @@
     fixed;
   background-size: cover;
   padding: 500px;
-  width: 100%;
+  padding-left: 0;
+  width: 100v;
 }

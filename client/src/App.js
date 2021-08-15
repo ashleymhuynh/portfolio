@@ -7,6 +7,7 @@ import ProjectDetail from "./screens/ProjectDetail/ProjectDetail";
 import ProjectEdit from "./screens/ProjectEdit/ProjectEdit";
 import NewProject from "./screens/NewProject/NewProject";
 import Login from "./screens/Login/Login";
+import Blog from "./screens/Blog/Blog";
 import Contact from "./screens/Contact/Contact";
 import Biography from "./screens/Biography/Biography";
 import Dashboard from "./screens/Dashboard/Dashboard";
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/home" component={Home} />
         <Route exact path="/biography" component={Biography} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/blog" component={Blog} />
         <Route exact path="/login">
           <Login setAdmin={setAdmin} />
         </Route>

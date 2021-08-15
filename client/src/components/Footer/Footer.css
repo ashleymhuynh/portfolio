@@ -1,0 +1,17 @@
+.Footer {
+  background: #b0b0b0;
+  text-align: center;
+  padding: 1.2rem;
+  padding-bottom: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+}
+.footer-link {
+  display: block;
+  padding-bottom: 0;
+  font-family: "Suranna", serif;
+  color: black;
+}

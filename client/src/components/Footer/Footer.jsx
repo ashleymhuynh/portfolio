@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = (props) => {
   return (
     <div className="Footer">
-      <Link className="link" to="/login">
-        Ashley Huynh
+      <Link
+        className="footer-link"
+        to="/login"
+        style={{ textDecoration: "none" }}
+      >
+        Ashley Huynh ©
       </Link>
     </div>
   );

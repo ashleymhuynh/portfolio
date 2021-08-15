@@ -3,10 +3,13 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { verifyAdmin } from "../../services/admin";
 import { logout } from "../../services/admin";
-// import "./Navbar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import "./Navbar.css";
 
 const Navbar = (props) => {
   const [adminVerified, setAdminVerified] = useState(null);
+  const [showMenu, setShowMenu] = useState(false);
   const history = useHistory();
 
   useEffect(() => {
@@ -26,39 +29,51 @@ const Navbar = (props) => {
 
   return (
     <div className="Navbar">
-      <NavLink className="logo" to="/home">
+      <FontAwesomeIcon
+        className={showMenu ? `fa-times` : `fa-bars `}
+        icon={showMenu ? faTimes : faBars}
+        size="2x"
+        style={{ color: "#F7C143" }}
+        onClick={() => setShowMenu(!showMenu)}
+      />
+
+      <NavLink className="logo-container" to="/home">
         <img
-          id="logo"
+          id="navbar-logo"
           src={"https://i.imgur.com/WiQW8w6.png"}
           alt="logo"
-          width="200"
         />
       </NavLink>
-      <div className="menu">
-        <NavLink className="link" to="/projects">
-          Projects
-        </NavLink>
-
-        <NavLink className="link" to="/blog">
-          Bleeding Ink
-        </NavLink>
-
-        <NavLink className="link" to="/biography">
-          Biography
-        </NavLink>
-
-        <NavLink className="link" to="/contact">
-          Contact
-        </NavLink>
-        {adminVerified ? (
-          <>
-            <NavLink className="link" to="/dashboard">
-              Dashboard
-            </NavLink>
-            <span onClick={logoutAdmin}>Logout</span>
-          </>
-        ) : null}
-      </div>
+      <nav className="navbar">
+        <div className="navbar-menu">
+          {showMenu ? (
+            <div className="mobile-navbar-right-container">
+              <NavLink className="link" to="/projects">
+                Projects
+              </NavLink>
+              <NavLink className="link" to="/blog">
+                Bleeding Ink
+              </NavLink>
+              <NavLink className="link" to="/biography">
+                Biography
+              </NavLink>
+              <NavLink className="link" to="/contact">
+                Contact
+              </NavLink>
+              {adminVerified ? (
+                <>
+                  <NavLink className="link" to="/dashboard">
+                    Dashboard
+                  </NavLink>
+                  <span onClick={logoutAdmin}>Logout</span>
+                </>
+              ) : null}
+            </div>
+          ) : (
+            <></>
+          )}
+        </div>
+      </nav>
     </div>
   );
 };
