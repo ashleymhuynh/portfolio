@@ -1,0 +1,107 @@
+.ProjectDetail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  margin-top: 7.5rem;
+}
+
+.header-category {
+  font-family: "Dawning of a New Day", cursive;
+  color: #c7a047;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.header {
+  display: block;
+  margin: 0 auto;
+  margin-top: -1.5rem !important;
+  text-align: center;
+  font-family: "Suranna", serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.detail {
+  display: flex;
+  width: 80vw;
+  margin-top: 2rem;
+}
+.detail-image {
+  display: flex;
+  background-size: cover;
+  height: 40vh;
+  margin-left: -1.5rem;
+  margin-right: 1.5rem;
+  filter: grayscale(70%);
+  border-radius: 2px;
+}
+.detail-image:hover {
+  filter: grayscale(0);
+}
+
+.text-detail {
+  font-family: "Suranna", serif;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+}
+.detail-about {
+  margin-top: 0;
+  line-height: 2;
+  margin-left: 1.5rem;
+}
+.details-links {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 1.75rem;
+  margin-right: 1.5rem;
+}
+.details-links a {
+  color: #ffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.details-links a:hover {
+  color: black;
+}
+
+.line {
+  border-bottom: 3px solid #f7c143;
+  width: 11rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.back-button {
+  font-family: "Suranna", serif;
+  color: black;
+  margin-left: 6rem;
+  margin-top: -2rem !important;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 1.25rem;
+  text-decoration-color: #f7c143;
+  text-transform: lowercase;
+}
+.back-button:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffff;
+}
+.edit-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 6.25rem;
+  margin-right: 10rem;
+  font-family: "Suranna", serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: black;
+  border-radius: 2px;
+}
+.edit-button:hover {
+  color: #f7c143;
+}

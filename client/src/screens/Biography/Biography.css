@@ -1,0 +1,72 @@
+.Biography {
+  align-items: center;
+  margin: 10px;
+  margin-top: 9rem;
+  margin-bottom: 5rem;
+}
+.biography-image {
+  max-height: 50%;
+  max-width: 35%;
+  display: block;
+  margin: 0 auto;
+  margin-right: 35vw;
+  margin-top: -1.75rem;
+}
+
+.about-par {
+  font-family: "Suranna", serif;
+  margin: 27rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+.resume {
+  font-family: "Suranna", serif;
+  color: black;
+  text-decoration-color: #f7c143;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.resume:hover {
+  color: #f7c143;
+  font-weight: 700;
+  text-decoration-color: #fff;
+}
+
+.endorsements-header {
+  margin-left: 9rem;
+  font-weight: 500;
+  font-family: "Suranna", serif;
+}
+.Endorsements {
+  font-family: "Suranna", serif;
+  display: flex;
+  flex-direction: row;
+  margin-left: 3rem;
+  /* overflow-x: scroll; */
+}
+
+​ .endoresment-list {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  margin: 5rem;
+  /* margin-right: 55rem; */
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.endoresment-content {
+  padding-left: 2rem;
+}
+.endoresment-name {
+  margin-left: 17rem;
+}
+.form {
+  display: flex;
+  margin-top: 0;
+}

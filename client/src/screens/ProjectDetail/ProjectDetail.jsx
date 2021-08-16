@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import Layout from "../../components/Layout/Layout";
 import { getProject } from "../../services/projects";
 import { useParams, Link } from "react-router-dom";
+import { verifyAdmin } from "../../services/admin";
 import "./ProjectDetail.css";
 
 const ProjectDetail = (props) => {
   const [project, setProject] = useState(null);
   const [isLoaded, setLoaded] = useState(null);
+  const [adminVerified, setAdminVerified] = useState(null);
   const { id } = useParams();
-
-  const { admin } = props;
 
   useEffect(() => {
     const fetchProject = async () => {
@@ -17,39 +17,50 @@ const ProjectDetail = (props) => {
       setProject(project);
       setLoaded(true);
     };
+
     fetchProject();
   }, [id]);
+
+  useEffect(() => {
+    const checkAdmin = async () => {
+      const adminExist = await verifyAdmin();
+      setAdminVerified(adminExist ? true : false);
+    };
+    checkAdmin();
+  }, []);
 
   if (!isLoaded) {
     return <h1 className="loading-message">Loading</h1>;
   }
 
   return (
-    <Layout admin={props.admin}>
+    <Layout>
       <div className="ProjectDetail">
-        <h2 className="header category">Projects</h2>
-        <h2 className="project_header">{project.project_title}</h2>
+        <h2 className="header-category">Projects</h2>
+        <h2 className="header">{project.project_title}</h2>
         <section className="detail">
           <div className="detail-image">
             <img
-              className="image"
+              className="detail-image"
               src={project.image_url}
               alt={project.project_title}
-              width="300"
             />
           </div>{" "}
           <div className="text-detail">
             <p className="detail-about">{project.about}</p>
-            <a href={project.github_url} target="_blank" rel="noreferrer">
-              Github
-            </a>{" "}
-            <a href={project.deploy_url} target="_blank" rel="noreferrer">
-              Deployed Site
-            </a>{" "}
+            <div className="details-links">
+              <a href={project.github_url} target="_blank" rel="noreferrer">
+                Github
+              </a>{" "}
+              <a href={project.deploy_url} target="_blank" rel="noreferrer">
+                Deployed Site
+              </a>
+            </div>
+            <div className="line"></div>
           </div>
         </section>{" "}
         <div className="update-button">
-          {admin ? (
+          {adminVerified ? (
             <Link to={`/projects/${project.id}/edit`}>
               <button className="edit-button">Update</button>
             </Link>
@@ -57,6 +68,11 @@ const ProjectDetail = (props) => {
             <div />
           )}
         </div>
+      </div>
+      <div>
+        <Link to="/projects" className="back-button">
+          Back to Projects
+        </Link>
       </div>
     </Layout>
   );

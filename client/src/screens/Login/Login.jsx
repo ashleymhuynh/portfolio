@@ -8,41 +8,38 @@ const Login = (props) => {
   const history = useHistory();
   const { setAdmin } = props;
 
-  const [form, setForm] = useState({
+  const [returnAdmin, setReturnAdmin] = useState({
     email: "",
     password: "",
   });
 
   const handleChange = (event) => {
-    setForm({
-      ...form,
-      [event.target.name]: event.target.value,
-    });
+    const { name, value } = event.target;
+    setReturnAdmin({ ...returnAdmin, [name]: value });
   };
 
-  const logTheQueenIn = async (event) => {
+  const logThePrincessIn = async (event) => {
     event.preventDefault();
-    const signInAdmin = async () => {
-      const admin = await login(form);
-      setAdmin(admin);
-      setTimeout(() => {
-        history.push("/projects");
-      }, 200);
-    };
-    signInAdmin();
+    const admin = await login(returnAdmin);
+    setAdmin(admin);
+    setTimeout(() => {
+      history.push("/dashboard");
+    }, 200);
   };
 
   return (
-    <Layout admin={props.admin}>
+    <Layout>
       <div className="Login">
-        <h1>Welcome back, Ashley! Please Login </h1>
-        <form className="signin-form" onSubmit={logTheQueenIn}>
+        <h1 className="login-header">
+          Welcome back, <span>Ashley! </span> Please Login{" "}
+        </h1>
+        <form className="signin-form" onSubmit={logThePrincessIn}>
           <input
             type="email"
             name="email"
             id="email-input"
             placeholder="Enter Email"
-            value={form.email}
+            value={returnAdmin.email}
             onChange={handleChange}
           />
           <input
@@ -50,10 +47,12 @@ const Login = (props) => {
             name="password"
             id="password-input"
             placeholder="Enter Password"
-            value={form.password}
+            value={returnAdmin.password}
             onChange={handleChange}
           />
-          <button type="submit">Let's Go!</button>
+          <button type="submit" className="login-button">
+            Let's Go!
+          </button>
         </form>
       </div>
     </Layout>

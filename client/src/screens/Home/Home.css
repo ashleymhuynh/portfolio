@@ -1,0 +1,97 @@
+.Home {
+  background: #b0b0b0;
+  height: 100%;
+  width: 99vw;
+  margin: 0;
+}
+#homescreen-logo {
+  margin-left: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+#home-image {
+  max-height: 50%;
+  max-width: 34.5%;
+  display: block;
+  margin: 0 auto;
+  margin-right: 35vw;
+}
+#quote {
+  font-family: "Dawning of a New Day", cursive;
+  font-weight: 600;
+  font-size: 1.5rem;
+  position: relative;
+  float: left;
+  margin-top: -20vw;
+  margin-left: 14rem;
+  margin-bottom: 0;
+  padding: 5rem;
+  padding-top: 0;
+  max-width: 13rem;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-10deg);
+}
+.categories {
+  font-family: "Dawning of a New Day", cursive;
+  color: #c7a047;
+  font-size: 1.75rem;
+  font-weight: 600;
+  position: relative;
+  float: right;
+  margin-top: -20rem;
+  line-height: 4;
+  margin-right: 26.5rem;
+}
+.works {
+  margin-top: -2.75rem;
+}
+.about {
+  margin-top: 1.5rem;
+}
+.list {
+  font-family: "Suranna", serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  float: right;
+  margin-top: -21.5rem;
+  line-height: 1.25;
+  margin-right: 11rem;
+  margin-bottom: 0;
+}
+.list h1 {
+  color: black;
+  font-family: "Suranna", serif;
+  font-size: 3rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  transition: all 0.35s ease;
+}
+.list h1:hover {
+  color: black;
+}
+
+.list h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(250, 210, 0);
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.list h1:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(250, 210, 0);
+}
+
+.menu-container {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
