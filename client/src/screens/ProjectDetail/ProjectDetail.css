@@ -49,6 +49,7 @@
 .detail-about {
   margin-top: 0;
   line-height: 2;
+  margin-left: 1.5rem;
 }
 .details-links {
   display: flex;
@@ -70,21 +71,37 @@
   width: 11rem;
   display: block;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.25rem;
 }
+
 .back-button {
-  text-decoration-color: #f7c143;
-}
-.back-button h4 {
   font-family: "Suranna", serif;
   color: black;
   margin-left: 6rem;
-  margin-top: 2rem;
+  margin-top: -2rem !important;
+  margin-bottom: 0;
   font-weight: 300;
   font-size: 1.25rem;
+  text-decoration-color: #f7c143;
   text-transform: lowercase;
 }
-.back-button h4:hover {
+.back-button:hover {
   text-decoration: underline;
   text-decoration-color: #ffff;
+}
+.edit-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 6.25rem;
+  margin-right: 10rem;
+  font-family: "Suranna", serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: black;
+  border-radius: 2px;
+}
+.edit-button:hover {
+  color: #f7c143;
 }

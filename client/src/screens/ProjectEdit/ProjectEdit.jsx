@@ -58,70 +58,74 @@ const ProjectEdit = (props) => {
   return (
     <Layout admin={props.admin}>
       <section className="ProjectEdit">
-        <div className="detail-image">
-          <img
-            className="image"
-            src={project.image_url}
-            alt={project.project_title}
-            width="300"
-          />
-        </div>{" "}
-        <div className="edit-details">
-          <form className="edit-form" onSubmit={handleSubmit}>
-            <label>Project Title:</label>
-            <input
-              name="project_title"
-              id="title-input"
-              value={project.project_title}
-              autoFocus
-              onChange={handleChange}
+        <h2 className="header-category">Edit</h2>
+        <h2 className="header">{project.project_title}</h2>
+        <div className="project-edit">
+          <div className="project-edit-image">
+            <img
+              className="edit-image"
+              src={project.image_url}
+              alt={project.project_title}
+              width="300"
             />
-            <label>Description:</label>
-            <textarea
-              name="about"
-              value={project.about}
-              autoFocus
-              onChange={handleChange}
-            />
-            <label>Image URL:</label>
-            <input
-              type="text"
-              name="image_url"
-              value={project.image_url}
-              autoFocus
-              onChange={handleChange}
-            />
-            <label>Github URL:</label>
-            <input
-              type="text"
-              name="github_url"
-              value={project.github_url}
-              autoFocus
-              onChange={handleChange}
-            />
-            <label>Deployed URL:</label>
-            <input
-              type="text"
-              name="deployed_url"
-              value={project.deploy_url}
-              autoFocus
-              onChange={handleChange}
-            />
-            <label>Languages/Skills:</label>
-            <input
-              type="text"
-              name="languages"
-              value={project.languages}
-              autoFocus
-              onChange={handleChange}
-            />
-            <button className="edit-button" type="submit">
-              Submit Change!
-            </button>
-          </form>
-          <div>
+          </div>{" "}
+          <div className="edit-details">
+            <form className="edit-form" onSubmit={handleSubmit}>
+              <label>Project Title:</label>
+              <input
+                name="project_title"
+                id="title-input"
+                value={project.project_title}
+                autoFocus
+                onChange={handleChange}
+              />
+              <label>Description:</label>
+              <textarea
+                name="about"
+                value={project.about}
+                autoFocus
+                onChange={handleChange}
+              />
+              <label>Image URL:</label>
+              <input
+                type="text"
+                name="image_url"
+                value={project.image_url}
+                autoFocus
+                onChange={handleChange}
+              />
+              <label>Github URL:</label>
+              <input
+                type="text"
+                name="github_url"
+                value={project.github_url}
+                autoFocus
+                onChange={handleChange}
+              />
+              <label>Deployed URL:</label>
+              <input
+                type="text"
+                name="deployed_url"
+                value={project.deploy_url}
+                autoFocus
+                onChange={handleChange}
+              />
+              <label>Languages/Skills:</label>
+              <input
+                type="text"
+                name="languages"
+                value={project.languages}
+                autoFocus
+                onChange={handleChange}
+              />
+              <button className="submit-edit-button" type="submit">
+                Submit Change!
+              </button>
+            </form>
+          </div>
+          <div className="delete-container">
             <button
-              className="delete-button"
+              className="edit-delete-button"
               onClick={() => deleteProject(project.id)}
             >
               Delete

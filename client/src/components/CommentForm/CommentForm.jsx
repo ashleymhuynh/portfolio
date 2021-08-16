@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createComment } from "../../services/comments";
+import "./CommentForm.css";
 
 const CommentForm = () => {
   const [comment, setComment] = useState({
@@ -23,6 +24,13 @@ const CommentForm = () => {
     const newComment = await createComment(comment);
     setIsNew(newComment);
   };
+  if (isNew) {
+    setComment({
+      name: "",
+      content: "",
+      is_approved: false,
+    });
+  }
 
   return (
     <div className="Endorsement">

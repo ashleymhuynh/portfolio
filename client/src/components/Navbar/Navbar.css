@@ -46,7 +46,8 @@
   z-index: 3;
 }
 
-.mobile-navbar-right-container .link {
+.mobile-navbar-right-container .link,
+span {
   text-decoration: none;
   color: black;
   font-size: 4rem;
@@ -54,11 +55,13 @@
   line-height: 1.5;
   font-weight: 300;
 }
-.mobile-navbar-right-container .link:hover {
+.mobile-navbar-right-container .link:hover,
+span:hover {
   color: rgba(250, 210, 0);
 }
 
-.mobile-navbar-right-container .link:hover {
+.mobile-navbar-right-container .link:hover,
+span:hover {
   transform: scaleX(1);
 }
 

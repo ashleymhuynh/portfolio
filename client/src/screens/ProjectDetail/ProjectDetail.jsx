@@ -71,7 +71,7 @@ const ProjectDetail = (props) => {
       </div>
       <div>
         <Link to="/projects" className="back-button">
-          <h4>Back to Projects</h4>
+          Back to Projects
         </Link>
       </div>
     </Layout>
