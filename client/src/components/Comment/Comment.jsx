@@ -28,6 +28,7 @@ const Comment = (props) => {
       const adminExist = await verifyAdmin();
       setAdminVerified(adminExist ? true : false);
     };
+    checkAdmin();
   };
 
   return (

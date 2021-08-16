@@ -11,6 +11,7 @@ const AllComments = () => {
       let unapprovedComments = [];
       comments.map((comment) => {
         if (!comment.is_approved ? unapprovedComments.push(comment) : null);
+        return unapprovedComments;
       });
       setUnapprovedComments(unapprovedComments);
     };

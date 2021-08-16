@@ -14,8 +14,8 @@ const Biography = (props) => {
       const allComments = await getAllComments();
       let approvedComments = [];
       allComments.map((comment) => {
-        if (comment.is_approved ? approvedComments.push(comment) : null) {
-        }
+        if (comment.is_approved ? approvedComments.push(comment) : null);
+        return approvedComments;
       });
       setApprovedComments(approvedComments);
     };
