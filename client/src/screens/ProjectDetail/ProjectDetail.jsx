@@ -41,20 +41,22 @@ const ProjectDetail = (props) => {
         <section className="detail">
           <div className="detail-image">
             <img
-              className="image"
+              className="detail-image"
               src={project.image_url}
               alt={project.project_title}
-              width="300"
             />
           </div>{" "}
           <div className="text-detail">
             <p className="detail-about">{project.about}</p>
-            <a href={project.github_url} target="_blank" rel="noreferrer">
-              Github
-            </a>{" "}
-            <a href={project.deploy_url} target="_blank" rel="noreferrer">
-              Deployed Site
-            </a>{" "}
+            <div className="details-links">
+              <a href={project.github_url} target="_blank" rel="noreferrer">
+                Github
+              </a>{" "}
+              <a href={project.deploy_url} target="_blank" rel="noreferrer">
+                Deployed Site
+              </a>
+            </div>
+            <div className="line"></div>
           </div>
         </section>{" "}
         <div className="update-button">
@@ -66,6 +68,11 @@ const ProjectDetail = (props) => {
             <div />
           )}
         </div>
+      </div>
+      <div>
+        <Link to="/projects" className="back-button">
+          <h4>Back to Projects</h4>
+        </Link>
       </div>
     </Layout>
   );

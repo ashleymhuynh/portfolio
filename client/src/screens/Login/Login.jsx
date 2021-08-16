@@ -30,7 +30,9 @@ const Login = (props) => {
   return (
     <Layout>
       <div className="Login">
-        <h1>Welcome back, Ashley! Please Login </h1>
+        <h1 className="login-header">
+          Welcome back, <span>Ashley! </span> Please Login{" "}
+        </h1>
         <form className="signin-form" onSubmit={logThePrincessIn}>
           <input
             type="email"
@@ -48,7 +50,9 @@ const Login = (props) => {
             value={returnAdmin.password}
             onChange={handleChange}
           />
-          <button type="submit">Let's Go!</button>
+          <button type="submit" className="login-button">
+            Let's Go!
+          </button>
         </form>
       </div>
     </Layout>

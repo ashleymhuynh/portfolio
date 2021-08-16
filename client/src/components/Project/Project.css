@@ -5,29 +5,37 @@
   margin: 10px;
   box-shadow: 1px 1px 3px 1px #474747;
   transition: 250ms all;
-  padding: 18px;
+  padding: 7rem;
+  max-width: 17rem;
+  max-height: 25rem;
   margin-bottom: 60px;
   background: black;
+  border-radius: 2px;
 }
-
-.Project:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
+.project {
+  text-decoration: none;
 }
-
-.Project .title {
+.Project .project .title {
   padding: 10px;
   color: #fff;
   font-family: "Suranna", serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 300;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1;
 }
 
 .project .image {
   max-width: 400px;
   max-height: 500px;
-  filter: grayscale(95%);
+  /* filter: grayscale(95%); */
 }
-.project .image:hover {
-  filter: grayscale(0%);
+.Project:hover {
+  transform: scale(1.02);
+  color: red !important;
+  opacity: 0.9;
+  box-shadow: 1px 1px 4px 1px #d8c31e;
 }
