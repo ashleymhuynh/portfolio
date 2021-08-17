@@ -23,15 +23,16 @@
   position: relative;
   float: left;
   margin-top: -20vw;
-  margin-left: 14rem;
+  margin-left: 17vw;
   margin-bottom: 0;
-  padding: 5rem;
+  padding: 5vw;
   padding-top: 0;
-  max-width: 13rem;
+  max-width: 13vw;
   text-align: center;
   line-height: 20px;
   transform: rotate(-10deg);
 }
+
 .categories {
   font-family: "Dawning of a New Day", cursive;
   color: #c7a047;
@@ -39,9 +40,9 @@
   font-weight: 600;
   position: relative;
   float: right;
-  margin-top: -20rem;
+  margin-top: -40vh;
   line-height: 4;
-  margin-right: 26.5rem;
+  margin-right: 29.5vw;
 }
 .works {
   margin-top: -2.75rem;
@@ -55,9 +56,9 @@
   flex-direction: column;
   position: relative;
   float: right;
-  margin-top: -21.5rem;
+  margin-top: -41.5vh;
   line-height: 1.25;
-  margin-right: 11rem;
+  margin-right: 12vw;
   margin-bottom: 0;
 }
 .list h1 {
@@ -92,6 +93,26 @@
 }
 
 .menu-container {
-  margin-top: 3rem;
+  margin-top: 0;
   margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1900px) {
+  .menu-container {
+    margin-top: 10vh;
+  }
+  .list {
+    margin-right: 16.5vw;
+  }
+}
+
+@media only screen and (min-width: 1700px) and (max-width: 1899px) {
+  .list {
+    margin-right: 16vw;
+  }
+}
+@media only screen and (min-width: 1596px) and (max-width: 1699px) {
+  .list {
+    margin-right: 14vw;
+  }
 }

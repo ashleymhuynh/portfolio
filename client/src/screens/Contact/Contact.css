@@ -1,0 +1,56 @@
+.Contact {
+  align-items: center;
+  margin: 10px;
+  margin-top: 9rem;
+  margin-bottom: 5rem;
+}
+.contact-subheader {
+  text-align: center;
+  font-family: "Dawning of a New Day", cursive;
+  font-size: 1.65rem;
+  margin-top: -3vh;
+}
+.typewriter {
+  display: block;
+  margin: 0 auto;
+}
+.contact-details-container {
+  text-align: center;
+  display: block;
+  margin: 0;
+  margin-top: -53vh;
+  margin-left: 2vh;
+}
+
+.contact-details-container strong {
+  font-weight: 600;
+  font-family: "Suranna", serif;
+  text-decoration: underline;
+}
+
+.email {
+  color: black;
+  text-decoration: none;
+  font-family: "Suranna", serif;
+  text-align: center;
+  line-height: 1.25;
+}
+.linkedin {
+  color: black;
+  text-decoration: none;
+  font-family: "Suranna", serif;
+  text-align: center;
+  line-height: 1.25;
+}
+.github {
+  color: black;
+  text-decoration: none;
+  font-family: "Suranna", serif;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.contact-details-container span:hover {
+  font-weight: 700;
+  color: rgb(238, 198, 0);
+}

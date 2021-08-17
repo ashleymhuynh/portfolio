@@ -30,7 +30,7 @@ const Projects = (props) => {
     <Layout admin={props.admin}>
       <div className="Projects">
         <h1 id="header">Projects</h1>
-        <div className="add">
+        <div className="add-container">
           {adminVerified ? (
             <Link to={`/newproject`}>
               <button className="add-button">New Project</button>

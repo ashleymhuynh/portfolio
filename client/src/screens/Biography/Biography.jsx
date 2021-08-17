@@ -8,6 +8,7 @@ import "./Biography.css";
 const Biography = (props) => {
   const [approvedComments, setApprovedComments] = useState([]);
   const [adminVerified, setAdminVerified] = useState(null);
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const fetchApprovedComments = async () => {
@@ -20,7 +21,7 @@ const Biography = (props) => {
       setApprovedComments(approvedComments);
     };
     fetchApprovedComments();
-  }, []);
+  }, [toggleFetch]);
 
   useEffect(() => {
     const checkAdmin = async () => {
@@ -40,30 +41,40 @@ const Biography = (props) => {
           alt="Ashley Huynh"
         />
         <p className="about-par">
-          ASHLEY IS A CREATE PROBLEM SOLVER <br />
-          She is a collaborative full-stack developer with a background in
-          project management and creative marketing. Ashley has a passion for
-          storytelling and thrives on creating unique moments. She is energized
-          by challenges and comfortable with flexibility.
+          <strong>
+            FULL-STACK DEVELOPER | CREACTIVE MARKETING BAKCKROUND{" "}
+          </strong>{" "}
+          <br />
+          She is a creative and collaborative full-stack developer with a
+          background in project management and creative marketing. Ashley has a
+          passion for storytelling and thrives on creating unique moments. She
+          is energized by challenges and comfortable with flexibility.
         </p>
-        <a
-          href="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:a2483a00-2a7f-46c7-8ea7-82b99426fcda"
-          target="_blank"
-          rel="noreferrer"
-          className="resume"
-        >
-          View Resume
-        </a>
+        <div className="resume-container">
+          <a
+            href="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:a2483a00-2a7f-46c7-8ea7-82b99426fcda"
+            target="_blank"
+            rel="noreferrer"
+            className="resume"
+          >
+            View Resume
+          </a>
+        </div>
         <h2 className="endorsements-header">Endorsements</h2>
-        <div className="Endorsements">
+        <div className="endorsements">
           {approvedComments.map((comment) => {
             return (
-              <div key={comment.id} className="endoresment-list">
+              <div key={comment.id} className="love-container">
                 <p className="endoresment-content">"{comment.content}"</p>
                 <h3 className="endoresment-name">-{comment.name}</h3>
                 {adminVerified ? (
                   <button
-                    onClick={() => deleteComment(comment.id)}
+                    onClick={() =>
+                      deleteComment(
+                        comment.id,
+                        setToggleFetch((toggleFetch) => !toggleFetch)
+                      )
+                    }
                     className="delete-button"
                   >
                     Delete

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 const AllComments = () => {
   const [unapprovedComments, setUnapprovedComments] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const fetchUnapprovedComments = async () => {
@@ -16,7 +17,7 @@ const AllComments = () => {
       setUnapprovedComments(unapprovedComments);
     };
     fetchUnapprovedComments();
-  }, []);
+  }, [toggleFetch]);
 
   return (
     <div>
@@ -28,6 +29,7 @@ const AllComments = () => {
             name={unapprovedComment.name}
             content={unapprovedComment.content}
             is_approved={unapprovedComment.is_approved}
+            setToggleFetch={setToggleFetch}
           />
         );
       })}

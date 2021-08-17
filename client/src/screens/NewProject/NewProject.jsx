@@ -39,8 +39,8 @@ const NewProject = (props) => {
 
   return (
     <Layout admin={props.admin}>
-      <div clasName="NewProject">
-        <h1>New Project</h1>
+      <div className="NewProject">
+        <h1 className="header">New Project</h1>
       </div>{" "}
       <div className="new-details">
         <form className="new-project" onSubmit={handleSubmit}>
@@ -51,7 +51,7 @@ const NewProject = (props) => {
             onChange={handleChange}
           />
           <label>Description:</label>
-          <input
+          <textarea
             type="text"
             name="about"
             value={project.about}
@@ -85,7 +85,7 @@ const NewProject = (props) => {
             value={project.languages}
             onChange={handleChange}
           />
-          <button className="edit-button" type="submit">
+          <button className="new-button" type="submit">
             Submit Change!
           </button>
         </form>

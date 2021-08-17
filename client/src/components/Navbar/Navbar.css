@@ -26,9 +26,9 @@
 .fa-times {
   display: relative;
   align-items: right;
-  margin-top: 2rem !important;
+  margin-top: 3vh !important;
   margin-bottom: 3rem;
-  margin-left: 80rem;
+  margin-left: 90vw;
   z-index: 7;
 }
 .mobile-navbar-right-container {
@@ -47,7 +47,7 @@
 }
 
 .mobile-navbar-right-container .link,
-span {
+.navbar-logout {
   text-decoration: none;
   color: black;
   font-size: 4rem;
@@ -56,12 +56,12 @@ span {
   font-weight: 300;
 }
 .mobile-navbar-right-container .link:hover,
-span:hover {
+.navbar-logout:hover {
   color: rgba(250, 210, 0);
 }
 
 .mobile-navbar-right-container .link:hover,
-span:hover {
+.navbar-logout:hover {
   transform: scaleX(1);
 }
 
