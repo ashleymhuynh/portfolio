@@ -34,7 +34,7 @@ const CommentForm = () => {
 
   return (
     <div className="Endorsement">
-      <h4>Send Ashley Love</h4>{" "}
+      <h4>Send Ashley Love</h4>
       <div className="endorsement-form">
         <form className="new-endorsement" onSubmit={handleSubmit}>
           <input
@@ -46,7 +46,8 @@ const CommentForm = () => {
           <textarea
             name="content"
             value={comment.content}
-            placeholder="Love note for Ashley..."
+            rows="4"
+            placeholder="Note for Ashley..."
             onChange={handleChange}
           />
 

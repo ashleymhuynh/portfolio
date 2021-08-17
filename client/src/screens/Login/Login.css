@@ -1,7 +1,7 @@
 .Login {
   align-items: center;
   margin: 10px;
-  margin-top: 9rem;
+  margin-top: 18vh;
 }
 .login-header {
   display: block;
@@ -14,7 +14,7 @@
   font-weight: 400;
   padding-left: 20rem;
   padding-right: 20rem;
-  line-height: 1;
+  line-height: 1.25;
   margin-bottom: 2rem;
 }
 .login-header span {
@@ -24,24 +24,28 @@
 .signin-form {
   display: flex;
   flex-direction: column;
-  margin-left: 27rem;
-  margin-right: 27rem;
+  margin-left: 34vw;
+  margin-right: 34vw;
   margin-top: 6rem;
   border: 2px solid black;
-  padding: 2rem;
+  justify-content: center;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
 }
 .signin-form input {
   align-items: center;
-  width: 70%;
   display: block;
   margin: 0 auto;
+  margin-left: 6vw;
+  margin-right: 7vw;
   margin-bottom: 1rem;
   font-family: "Suranna", serif;
 }
 
 .login-button {
-  margin-left: 12rem;
-  margin-right: 12rem;
+  margin-left: 10vw;
+  margin-right: 10vw;
   font-family: "Suranna", serif;
   text-transform: uppercase;
   color: #fff;

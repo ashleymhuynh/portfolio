@@ -1,7 +1,7 @@
 import { updateComment, deleteComment } from "../../services/comments";
 import { verifyAdmin } from "../../services/admin";
-
 import { useState } from "react";
+import "./Comment.css";
 
 const Comment = (props) => {
   const [comment, setComment] = useState({
@@ -10,24 +10,19 @@ const Comment = (props) => {
     is_approved: "false",
   });
 
-  const [adminVerified, setAdminVerified] = useState(null);
-
-  const [isApproved, setIsApproved] = useState(false);
-
   const handleApproval = async (event) => {
     event.preventDefault();
+    props.setToggleFetch((toggleFetch) => !toggleFetch);
     setComment({
       name: props.name,
       content: props.content,
       is_approved: true,
     });
-    const approved = await updateComment(props.id, comment);
-    setIsApproved(approved);
-
+    await updateComment(props.id, comment);
     const checkAdmin = async () => {
-      const adminExist = await verifyAdmin();
-      setAdminVerified(adminExist ? true : false);
+      await verifyAdmin();
     };
+    checkAdmin();
   };
 
   return (

@@ -65,7 +65,9 @@ const Navbar = (props) => {
                   <NavLink className="link" to="/dashboard">
                     Dashboard
                   </NavLink>
-                  <span onClick={logoutAdmin}>Logout</span>
+                  <span className="navbar-logout" onClick={logoutAdmin}>
+                    Logout
+                  </span>
                 </>
               ) : null}
             </div>

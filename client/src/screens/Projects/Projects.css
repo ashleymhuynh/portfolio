@@ -1,5 +1,5 @@
 .Projects {
-  margin-top: 9rem;
+  margin-top: 16vh;
   background-color: rgb(176, 176, 176);
 }
 #projects-container {
@@ -18,4 +18,17 @@
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 400;
+}
+.add-container {
+  align-items: center;
+  text-align: center;
+}
+.add-button {
+  font-family: "Suranna", serif;
+  text-transform: uppercase;
+  color: black;
+  background-color: #f7c143;
+  border: 1px solid #ffff;
+  border-radius: 2px;
+  box-shadow: 1px #f7c143;
 }

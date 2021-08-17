@@ -31,9 +31,11 @@
 .detail-image {
   display: flex;
   background-size: cover;
-  height: 40vh;
-  margin-left: -1.5rem;
-  margin-right: 1.5rem;
+  min-width: 50vh;
+  max-height: 50vh;
+  min-width: 37vw;
+  margin-left: -1.5vw;
+  margin-right: 1.5vw;
   filter: grayscale(70%);
   border-radius: 2px;
 }
@@ -44,18 +46,28 @@
 .text-detail {
   font-family: "Suranna", serif;
   font-size: 1.1rem;
-  margin-right: 1rem;
+  margin-right: 1vw;
 }
 .detail-about {
   margin-top: 0;
   line-height: 2;
-  margin-left: 1.5rem;
+  margin-left: 1.5vw;
+  margin-bottom: 0;
+}
+.skills {
+  text-align: center;
+  margin-top: 0.5vh;
+}
+.skills span {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .details-links {
   display: flex;
   justify-content: space-around;
-  margin-left: 1.75rem;
-  margin-right: 1.5rem;
+  margin-left: 2vw;
+  margin-right: 1.75vw;
 }
 .details-links a {
   color: #ffff;
@@ -68,7 +80,7 @@
 
 .line {
   border-bottom: 3px solid #f7c143;
-  width: 11rem;
+  width: 13vw;
   display: block;
   margin: 0 auto;
   margin-top: 1.75rem;
@@ -78,8 +90,8 @@
 .back-button {
   font-family: "Suranna", serif;
   color: black;
-  margin-left: 6rem;
-  margin-top: -2rem !important;
+  margin-left: 6.75vw;
+  margin-top: -3vh !important;
   margin-bottom: 0;
   font-weight: 300;
   font-size: 1.25rem;
@@ -91,11 +103,11 @@
   text-decoration-color: #ffff;
 }
 .edit-button {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   right: 0;
-  margin-bottom: 6.25rem;
-  margin-right: 10rem;
+  margin-bottom: 9.5vh;
+  margin-right: 10vw;
   font-family: "Suranna", serif;
   text-transform: uppercase;
   color: #fff;

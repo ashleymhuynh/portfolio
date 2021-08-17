@@ -5,11 +5,12 @@ import {
   updateProject,
   deleteProject,
 } from "../../services/projects";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams, Redirect, useHistory } from "react-router-dom";
 import "./ProjectEdit.css";
 import { verifyAdmin } from "../../services/admin";
 
 const ProjectEdit = (props) => {
+  const history = useHistory();
   const [project, setProject] = useState({
     project_title: "",
     about: "",
@@ -54,6 +55,20 @@ const ProjectEdit = (props) => {
   if (isUpdated) {
     return <Redirect to={`/projects/${id}`} />;
   }
+
+  const handleDelete = () => {
+    const deleteOneProject = async () => {
+      await deleteProject(id);
+    };
+    const checkAdmin = async () => {
+      await verifyAdmin();
+    };
+    setTimeout(() => {
+      history.push("/projects");
+    }, 500);
+    deleteOneProject();
+    checkAdmin();
+  };
 
   return (
     <Layout admin={props.admin}>
@@ -124,10 +139,7 @@ const ProjectEdit = (props) => {
             </form>
           </div>
           <div className="delete-container">
-            <button
-              className="edit-delete-button"
-              onClick={() => deleteProject(project.id)}
-            >
+            <button className="edit-delete-button" onClick={handleDelete}>
               Delete
             </button>
           </div>

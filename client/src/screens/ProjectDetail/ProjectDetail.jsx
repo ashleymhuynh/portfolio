@@ -48,6 +48,9 @@ const ProjectDetail = (props) => {
           </div>{" "}
           <div className="text-detail">
             <p className="detail-about">{project.about}</p>
+            <p className="skills">
+              <span>Skills: </span> {project.languages}
+            </p>
             <div className="details-links">
               <a href={project.github_url} target="_blank" rel="noreferrer">
                 Github

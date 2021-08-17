@@ -1,0 +1,39 @@
+.NewProject {
+  align-items: center;
+  margin: 10px;
+  margin-top: 15vh;
+  font-family: "Suranna", serif;
+}
+
+.new-project {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #c7a047;
+  margin-left: 23vw;
+  margin-right: 23vw;
+  justify-content: center;
+  text-align: center;
+  padding: 2vw;
+  font-family: "Suranna", serif;
+}
+.new-project input,
+.new-project textarea {
+  margin-bottom: 0vh;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  height: 3vh;
+}
+.new-button {
+  margin: 18vw;
+  margin-top: 3vh;
+  margin-bottom: 0.5vh;
+  padding: 0.25vh;
+  font-family: "Suranna", serif;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: black;
+  border-radius: 3px;
+}
+.new-button:hover {
+  color: #f7c143;
+}

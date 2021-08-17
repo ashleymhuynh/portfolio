@@ -31,7 +31,8 @@ const Login = (props) => {
     <Layout>
       <div className="Login">
         <h1 className="login-header">
-          Welcome back, <span>Ashley! </span> Please Login{" "}
+          Welcome back, <span>Ashley! </span>
+          <br /> Please Login{" "}
         </h1>
         <form className="signin-form" onSubmit={logThePrincessIn}>
           <input
