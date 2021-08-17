@@ -12,8 +12,6 @@
   font-size: 3.5rem;
   text-transform: uppercase;
   font-weight: 400;
-  padding-left: 20rem;
-  padding-right: 20rem;
   line-height: 1.25;
   margin-bottom: 2rem;
 }
@@ -54,4 +52,16 @@
 }
 .login-button:hover {
   color: #f7c143;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  .login-header {
+    font-size: 2.5rem;
+    margin-bottom: 1vh;
+  }
+  .signin-form {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 7vh;
+  }
 }

@@ -65,7 +65,20 @@
   transform: scaleX(1);
 }
 
-/* .fa-bars,
-.fa-times {
-  margin-top: 2rem;
-} */
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  #navbar-logo {
+    width: 55vw;
+    margin-top: 0.65vh;
+    margin-left: -4vw;
+  }
+  .svg-inline--fa,
+  .vg-inline--fa,
+  .fa-bars,
+  .fa-times {
+    display: relative;
+    align-items: right;
+    margin-top: 4vh !important;
+    margin-bottom: 2.75vh;
+    margin-left: 80vw;
+  }
+}

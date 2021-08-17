@@ -117,3 +117,27 @@
 .edit-button:hover {
   color: #f7c143;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  .header-category {
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+    font-size: 1.25rem;
+  }
+  .ProjectDetail .header {
+    line-height: 1;
+    font-size: 3rem;
+  }
+  .detail {
+    flex-direction: column;
+  }
+  .detail-image {
+    min-width: 43vh;
+    min-height: 42vh;
+    margin-left: -4vw;
+    filter: grayscale(0%);
+  }
+  .back-button {
+    margin-left: 32vw;
+  }
+}

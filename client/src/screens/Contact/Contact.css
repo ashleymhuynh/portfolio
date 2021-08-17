@@ -54,3 +54,38 @@
   font-weight: 700;
   color: rgb(238, 198, 0);
 }
+
+@media only screen and (min-width: 1900px) {
+}
+
+@media only screen and (min-width: 1700px) and (max-width: 1899px) {
+}
+@media only screen and (min-width: 1596px) and (max-width: 1699px) {
+}
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  .Contact {
+    margin-top: 14vh;
+    margin-bottom: 0;
+  }
+  .contact-subheader {
+    margin-top: -2vh;
+    font-size: 1.35rem;
+    width: 100%;
+  }
+
+  .typewriter {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10vh;
+    width: 117vw;
+    margin-left: -13vw;
+  }
+  .contact-details-container {
+    margin-top: -49vh;
+    margin-left: 1vh;
+  }
+  .contact-details-container span {
+    font-weight: 700;
+    color: rgba(202, 170, 6, 0.924);
+  }
+}

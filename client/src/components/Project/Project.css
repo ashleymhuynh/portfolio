@@ -39,3 +39,17 @@
   opacity: 0.9;
   box-shadow: 1px 1px 4px 1px #d8c31e;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  .Project {
+    margin: 10vw;
+    margin-top: -1vh;
+    padding: 4rem;
+    min-width: 50vw;
+    height: 15vh;
+  }
+  .Project .project .title {
+    margin-top: -2vh;
+    font-size: 1.75rem;
+  }
+}
