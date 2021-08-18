@@ -16,13 +16,14 @@
 
 #### - Front End:
 
-- Built with React
-- Full CRUD functionality
-- add endorsments
+- Build with React
+- Full CRUD functionality for projects
+- Add endorsments/comments to biography
 
 #### - Styling
 
-- Implementation of at least 2 media queries
+- Showcase a grey and yellow theme throughout portfolio
+- Implement a greyscale for project portfolio
 
 <br>
 
@@ -44,11 +45,9 @@
 
 ##### - Desktop View
 
-![Wireframe](https://user-images.githubusercontent.com/83625775/128962574-593cad2d-8f02-4d93-a709-b82298e8bc96.png)
+![Portfolio WireFrame](https://user-images.githubusercontent.com/83625775/129908299-13d357df-0d27-4518-9806-1c2ab49e9a97.png)
 
 ##### - Mobile View
-
-![Mobile](https://user-images.githubusercontent.com/83625775/128964020-370dddce-4123-4ec0-9565-08409600ebb3.png)
 
 #### Component Tree
 
@@ -61,7 +60,7 @@
 src
 |__ screens/
       |__ Home
-      |__ AboutMe
+      |__ Biography
       |__ Contact
       |__ Projects
       |__ ProjectDetails
@@ -71,33 +70,35 @@ src
 |__ components/
       |__ Layout
       |__ Navbar
-      |__ EndorsmentForm
+      |__ CommentForm
       |__ ProjectDelete
       |__ DisplayProjects
+      |__ AllComments
+      |__ Comment
 |__ services/
       |__ api-config
       |__ auth
       |__ users
       |__ projects
-      |__ endorsments
+      |__ comments
 ```
 
 #### Time Estimates
 
 | Task                    | Priority | Estimated Time | Time Invested | Actual Time |
 | ----------------------- | :------: | :------------: | :-----------: | :---------: |
-| Wireframe               |    H     |     8 hrs      |     6 hrs     |     TBD     |
-| Rails backend           |    H     |     5 hrs      |      TBD      |     TBD     |
-| Create CRUD Actions(BE) |    H     |     6 hrs      |      TBD      |     TBD     |
-| Seed Data               |    H     |     2 hrs      |      TBD      |     TBD     |
-| Migration and Schema    |    H     |     1 hrs      |      TBD      |     TBD     |
-| Create CRUD Actions(FE) |    H     |     6 hrs      |      TBD      |     TBD     |
-| Routes                  |    H     |     4 hrs      |      TBD      |     TBD     |
-| Service Files           |    H     |     6 hrs      |      TBD      |     TBD     |
-| Front End CRUD edits    |    H     |     6 hrs      |      TBD      |     TBD     |
-| Debugging               |    H     |     4 hrs      |      TBD      |     TBD     |
-| CSS                     |    H     |     12 hrs     |      TBD      |     TBD     |
-| TOTAL                   |          |     50 hrs     |      TBD      |     TBD     |
+| Wireframe               |    H     |     8 hrs      |     6 hrs     |    8hrs     |
+| Rails backend           |    H     |     5 hrs      |     5 hrs     |    5hrs     |
+| Create CRUD Actions(BE) |    H     |     6 hrs      |     5 hr      |    5hrs     |
+| Seed Data               |    H     |     2 hrs      |     2 hr      |     2hr     |
+| Migration and Schema    |    H     |     1 hrs      |     1 hr      |     1hr     |
+| Create CRUD Actions(FE) |    H     |     6 hrs      |     4 hr      |     1hr     |
+| Routes                  |    H     |     4 hrs      |     3 hrs     |    3 hrs    |
+| Service Files           |    H     |     6 hrs      |     3 hrs     |    3 hrs    |
+| Front End CRUD edits    |    H     |     6 hrs      |     6 hrs     |    6 hrs    |
+| Debugging               |    H     |     4 hrs      |     4 hrs     |    4 hrs    |
+| CSS                     |    H     |     12 hrs     |    12 hrs     |   12 hrs    |
+| TOTAL                   |          |     50 hrs     |    50 hrs     |   50 hrs    |
 
 <br>
 
@@ -111,12 +112,25 @@ src
 
 ## Post-MVP
 
-- Additional Styling
-- Implement a like button
+- Dashboard Styling
+- Add Blog
 
 ## Code Showcase
 
-TBD
+```
+useEffect(() => {
+    const fetchUnapprovedComments = async () => {
+      const comments = await getAllComments();
+      let unapprovedComments = [];
+      comments.map((comment) => {
+        if (!comment.is_approved ? unapprovedComments.push(comment) : null);
+        return unapprovedComments;
+      });
+      setUnapprovedComments(unapprovedComments);
+    };
+    fetchUnapprovedComments();
+  }, [toggleFetch]);
+```
 
 ## Code Issues & Resolutions
 

@@ -9,15 +9,19 @@ const Dashboard = () => {
     <Layout>
       <div className="Dashboard">
         <h1 className="header">Ashley's Dashboard! 🧚</h1>
-        <div>
-          <Link to={`/newproject`}>
-            <button>New Project</button>
-          </Link>
-        </div>
-        <div className="endorsement-approval">
-          <h4>Endorsements That Needs Approval</h4>
-          <div className="endorsements-container">
-            <AllComments />
+        <div className="dashboard-container">
+          <div className="new-project-container">
+            <Link to={`/newproject`}>
+              <button className="dashboard-new-project">
+                New Project Form
+              </button>
+            </Link>
+          </div>
+          <div className="endorsement-approval">
+            <h4>Endorsements That Needs Approval</h4>
+            <div className="endorsements-container">
+              <AllComments />
+            </div>
           </div>
         </div>
       </div>

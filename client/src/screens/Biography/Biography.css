@@ -102,7 +102,7 @@
   color: rgb(216, 68, 0);
 }
 
-@media only screen and (min-width: 375px) and (max-width: 390px) {
+@media only screen and (min-width: 375px) and (max-width: 480px) {
   .Biography {
     margin-top: 14vh;
     margin-bottom: 5vh;

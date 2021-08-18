@@ -36,11 +36,11 @@
   color: #fad200;
 }
 
-.poetry-container:hover {
+.blog-image:hover {
   filter: grayscale(0%);
 }
 
-@media only screen and (min-width: 375px) and (max-width: 390px) {
+@media only screen and (min-width: 375px) and (max-width: 480px) {
   .header {
     font-size: 3rem;
   }
@@ -50,9 +50,10 @@
   }
   .blog-image {
     width: 80vw;
-    filter: grayscale(95%);
+    filter: grayscale(0%);
   }
   .subheader {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-weight: 800;
   }
 }
