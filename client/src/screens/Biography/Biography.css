@@ -101,3 +101,59 @@
   border-color: black;
   color: rgb(216, 68, 0);
 }
+
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  .Biography {
+    margin-top: 14vh;
+    margin-bottom: 5vh;
+  }
+  .Biography .header {
+    font-size: 3rem;
+  }
+  .biography-image {
+    max-height: 75%;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: -3vh;
+  }
+  .about-par strong {
+    font-size: 0.99rem;
+  }
+  .about-par {
+    margin: 15vw;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  .resume-container {
+    margin: 0 20vw;
+  }
+  .resume {
+    margin-top: -3vh;
+    width: 100%;
+    font-weight: 600;
+    text-decoration-thickness: 3px;
+  }
+  .endorsements-header {
+    margin-left: 6vw;
+    margin-right: 44vw;
+  }
+  .endorsements {
+    margin-left: 2vw;
+    margin-right: 45vw;
+    max-height: 20vh;
+  }
+  .love-container {
+    font-size: 1rem;
+  }
+  .endoresment-content {
+    font-size: 0.85rem;
+  }
+  .endoresment-name {
+    margin-left: 20vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: 1rem;
+  }
+}

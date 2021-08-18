@@ -38,3 +38,29 @@
 .love-button:hover {
   color: #f7c143;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  .Endorsement {
+    top: 109vh;
+    right: 1vw;
+    border: 1px solid #ffff;
+  }
+  .Endorsement h4 {
+    font-size: 1.2rem;
+    padding: 0 1.5vw;
+  }
+  .new-endorsement {
+    padding: 1vh 5vw;
+  }
+  .new-endorsement input,
+  .new-endorsement textarea {
+    width: 27vw;
+  }
+  .new-endorsement textarea {
+    height: 8vh;
+  }
+  .love-button {
+    padding: 0.2vw;
+    font-size: 0.75rem;
+  }
+}

@@ -39,3 +39,20 @@
 .poetry-container:hover {
   filter: grayscale(0%);
 }
+
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  .header {
+    font-size: 3rem;
+  }
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-image {
+    width: 80vw;
+    filter: grayscale(95%);
+  }
+  .subheader {
+    font-size: 2rem;
+  }
+}

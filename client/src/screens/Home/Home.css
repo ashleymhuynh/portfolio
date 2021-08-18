@@ -116,3 +116,47 @@
     margin-right: 14vw;
   }
 }
+@media only screen and (min-width: 375px) and (max-width: 390px) {
+  #homescreen-logo {
+    width: 89vw;
+    margin-left: 2rem;
+    margin-bottom: 5rem;
+  }
+  #home-image {
+    min-height: 40vh;
+    max-width: 71vw;
+    display: block;
+    margin: 0 auto;
+    margin-top: -3vh;
+    margin-right: 13vw;
+  }
+  #quote {
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    float: left;
+    margin-top: -54vw;
+    margin-left: -1vw;
+    margin-bottom: 0;
+    padding: 2vw;
+    max-width: 36vw;
+  }
+  .menu-container {
+    margin-top: 45vh;
+  }
+  .categories {
+    font-size: 1.75rem;
+    position: relative;
+    float: right;
+    margin-top: -40vh;
+    line-height: 4;
+    margin-right: 69vw;
+  }
+  .about {
+    margin-top: 1vh;
+  }
+  .list h1 {
+    font-size: 2.5rem;
+    margin-right: 2vw;
+  }
+}
