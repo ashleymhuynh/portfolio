@@ -56,6 +56,9 @@
 }
 
 @media only screen and (min-width: 1900px) {
+  .contact-details-container {
+    margin-top: -42.5vh;
+  }
 }
 
 @media only screen and (min-width: 1700px) and (max-width: 1899px) {
