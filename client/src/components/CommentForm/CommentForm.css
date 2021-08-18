@@ -38,8 +38,15 @@
 .love-button:hover {
   color: #f7c143;
 }
+@media only screen and (min-width: 1800px) and (max-width: 1940px) {
+  .Endorsement {
+    position: absolute;
+    top: 85vh;
+    right: 10vw;
+  }
+}
 
-@media only screen and (min-width: 375px) and (max-width: 390px) {
+@media only screen and (min-width: 375px) and (max-width: 480px) {
   .Endorsement {
     top: 109vh;
     right: 1vw;

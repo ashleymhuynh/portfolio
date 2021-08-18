@@ -26,9 +26,9 @@ const Comment = (props) => {
   };
 
   return (
-    <div className="endorsements-container">
+    <div className="single-endorsements-container">
       <label>Name: {props.name}</label>
-      <label>Content: {props.name}</label>
+      <label>Content: {props.content}</label>
       <button onClick={handleApproval}>Approved</button>
       <button onClick={() => deleteComment(props.id)}>Delete</button>
     </div>

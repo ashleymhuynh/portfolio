@@ -9,6 +9,15 @@ const Blog = () => {
         <div className="blog-container">
           <div className="blogs">
             <img
+              id="morning-read"
+              className="blog-image"
+              alt="morning-reads"
+              src="https://i.imgur.com/SZM50yf.jpeg"
+            />
+            <h2 className="subheader morning-read">Morning Read</h2>
+          </div>
+          <div className="blogs">
+            <img
               id="poetry"
               className="blog-image"
               src="https://i.imgur.com/un6sjk1.jpeg"
