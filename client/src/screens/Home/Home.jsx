@@ -15,7 +15,7 @@ const Home = () => {
       <div className="photo">
         <img
           id="home-image"
-          src="https://i.imgur.com/lypt7JA.png"
+          src="https://i.imgur.com/2Uc08HV.png"
           alt="ashley"
         />
         <q id="quote">
