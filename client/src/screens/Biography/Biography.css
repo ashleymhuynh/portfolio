@@ -1,20 +1,20 @@
 .Biography {
   align-items: center;
   margin: 10px;
-  margin-top: 9rem;
-  margin-bottom: 40vh;
+  margin-top: 16vh;
+  margin-bottom: 0vh;
 }
 .biography-image {
   max-height: 50%;
   max-width: 35%;
   display: block;
   margin: 0 auto;
-  margin-top: -3vh;
+  margin-top: -4vh;
 }
 
 .about-par {
   font-family: "Suranna", serif;
-  margin: 30vw;
+  margin: 25.75vw;
   margin-top: 0.5rem;
   text-align: center;
   line-height: 1.65;
@@ -31,7 +31,7 @@
   text-align: center;
   display: block;
   margin: 0 auto;
-  margin-top: 2vh;
+  margin-top: 1vh;
   text-transform: uppercase;
   font-weight: 600;
   text-decoration-thickness: 3px;
@@ -102,11 +102,43 @@
   color: rgb(216, 68, 0);
 }
 @media only screen and (min-width: 1900px) {
-  .endorsements-header {
-    margin-top: 10vh;
+  .resume {
+    margin-top: 4vh;
   }
-  .form {
-    margin-top: 22vh;
+  .biography-image {
+    margin-top: -1vh;
+  }
+  .about-par {
+    font-family: "Suranna", serif;
+    margin: 25.75vw;
+    margin-top: 2vh;
+    text-align: center;
+    line-height: 1.65;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+  .biography-image {
+    max-height: 50%;
+    max-width: 60%;
+  }
+  .about-par strong {
+    font-size: 0.97rem;
+  }
+  .about-par {
+    margin: 6vw;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    font-size: 0.979rem;
+    margin-bottom: 0;
+  }
+  .resume-container {
+    margin: 0 20vw;
+  }
+  .resume {
+    margin-top: 1vh;
+    font-size: 0.95rem;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 480px) {
@@ -128,19 +160,17 @@
     font-size: 0.99rem;
   }
   .about-par {
-    margin: 15vw;
+    margin: 10vw;
     margin-top: 0.5rem;
     line-height: 1.6;
     font-size: 1rem;
+    margin-bottom: 0;
   }
   .resume-container {
     margin: 0 20vw;
   }
   .resume {
-    margin-top: -3vh;
-    width: 100%;
-    font-weight: 600;
-    text-decoration-thickness: 3px;
+    margin-top: 2vh;
   }
   .endorsements-header {
     margin-left: 6vw;

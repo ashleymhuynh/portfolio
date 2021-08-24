@@ -45,10 +45,11 @@ const Biography = (props) => {
             FULL-STACK DEVELOPER | CREACTIVE MARKETING BAKCKROUND{" "}
           </strong>{" "}
           <br />
-          She is a creative and collaborative full-stack developer with a
-          background in project management and creative marketing. Ashley has a
+          Ashley is a creative and collaborative full-stack developer with a
+          background in project management and creative marketing. She has a
           passion for storytelling and thrives on creating unique moments. She
-          is energized by challenges and comfortable with flexibility.
+          is energized by challenges and comfortable with flexibility. Check out
+          her resume below:
         </p>
         <div className="resume-container">
           <a
@@ -60,7 +61,7 @@ const Biography = (props) => {
             View Resume
           </a>
         </div>
-        <h2 className="endorsements-header">Endorsements</h2>
+        {/* <h2 className="endorsements-header">Endorsements</h2>
         <div className="endorsements">
           {approvedComments.map((comment) => {
             return (
@@ -83,10 +84,10 @@ const Biography = (props) => {
               </div>
             );
           })}
-        </div>
-        <div className="form">
+        </div> */}
+        {/* <div className="form">
           <CommentForm />
-        </div>
+        </div> */}
       </div>
     </Layout>
   );
