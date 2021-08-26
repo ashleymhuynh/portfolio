@@ -11,6 +11,9 @@ const Home = () => {
           width="400"
           alt="ashley logo"
         />
+        <h2 className="home-header-text">
+          SOFTWARE ENGINEER | FULL-STACK DEVELOPER
+        </h2>
       </header>
       <div className="photo">
         <img
@@ -19,7 +22,7 @@ const Home = () => {
           alt="ashley"
         />
         <q id="quote">
-          “Nothing is impossosible, the word itself says I’m possible”
+          Nothing is impossosible, the word itself says I’m possible
         </q>
       </div>
       <div className="menu-container">

@@ -4,9 +4,19 @@
   width: 99vw;
   margin: 0;
 }
+.home-header {
+  margin-left: 3vw;
+}
 #homescreen-logo {
-  margin-left: 1.5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 0;
+}
+.home-header-text {
+  font-family: "Suranna", serif;
+  margin-top: -4vh;
+  margin-bottom: 8.5vh;
+  font-size: 1.25rem;
+  color: #221802;
+  margin-left: -0.75vw;
 }
 
 #home-image {
@@ -98,7 +108,7 @@
 }
 
 .menu-container {
-  margin-top: 0;
+  margin-top: 2vh;
   margin-bottom: 0;
 }
 
@@ -112,6 +122,9 @@
   .list {
     margin-right: 16.5vw;
   }
+  .menu-container {
+    margin-top: 45vh;
+  }
 }
 
 @media only screen and (min-width: 1700px) and (max-width: 1899px) {
@@ -120,34 +133,120 @@
   }
 }
 @media only screen and (min-width: 1596px) and (max-width: 1699px) {
+  .home-header-text {
+    margin-top: -3vh;
+    margin-bottom: 8.5vh;
+    margin-left: -1.5vw;
+  }
+  #home-image {
+    max-height: 53%;
+    max-width: 40.5%;
+    margin-top: 9vh;
+    margin-right: 35vw;
+  }
+  #quote {
+    font-family: "Dawning of a New Day", cursive;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    float: left;
+    margin-top: -26vw;
+    margin-left: 11vw;
+    margin-bottom: 0;
+    padding: 6vw;
+    padding-top: 0;
+    max-width: 13vw;
+    text-align: center;
+    line-height: 24px;
+    transform: rotate(-16deg);
+  }
+  .menu-container {
+    margin-top: 11vh;
+    margin-bottom: 0;
+  }
   .list {
     margin-right: 14vw;
   }
 }
-@media only screen and (min-width: 375px) and (max-width: 390px) {
-  #homescreen-logo {
-    width: 89vw;
-    margin-left: 2rem;
-    margin-bottom: 5rem;
+
+@media only screen and (min-width: 481px) and (max-width: 610px) {
+  .home-header {
+    margin-left: 16vw;
+  }
+  .home-header-text {
+    margin-bottom: 8.5vh;
+    margin-left: -1.5vw;
   }
   #home-image {
     min-height: 40vh;
-    max-width: 71vw;
+    max-width: 56vw;
+    display: block;
+    margin: 0 auto;
+    margin-top: -4vh;
+    margin-right: 23vw;
+  }
+  #quote {
+    position: relative;
+    float: left;
+    margin-top: -47vw;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 2vw;
+    max-width: 36vw;
+    line-height: 0.85;
+  }
+  .menu-container {
+    margin-top: 41vh;
+  }
+  .categories {
+    font-size: 1.65rem;
+    position: relative;
+    float: right;
+    margin-top: -35vh;
+    line-height: 2;
+    margin-right: 60vw;
+  }
+
+  .list {
+    margin-top: -40vh;
+    line-height: 0.85;
+  }
+  .list h1 {
+    font-size: 2rem;
+    margin-right: 16vw;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 480px) {
+  #homescreen-logo {
+    width: 89vw;
+    margin-left: 5vw;
+  }
+  .home-header-text {
+    margin-top: -2vh;
+    margin-bottom: 8.5vh;
+    font-size: 1rem;
+    margin-left: 1.25vw;
+  }
+  #home-image {
+    min-height: 40vh;
+    max-width: 75vw;
     display: block;
     margin: 0 auto;
     margin-top: -3vh;
     margin-right: 13vw;
   }
   #quote {
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 800;
+    font-size: 1.2rem;
     position: relative;
     float: left;
-    margin-top: -54vw;
-    margin-left: -1vw;
+    margin-top: -59vw;
+    margin-left: -2vw;
     margin-bottom: 0;
     padding: 2vw;
     max-width: 36vw;
+    line-height: 0.85;
   }
   .menu-container {
     margin-top: 45vh;
@@ -157,11 +256,14 @@
     position: relative;
     float: right;
     margin-top: -40vh;
-    line-height: 4;
+    line-height: 3.2;
     margin-right: 69vw;
   }
   .about {
     margin-top: 1vh;
+  }
+  .list {
+    line-height: 1;
   }
   .list h1 {
     font-size: 2.5rem;
