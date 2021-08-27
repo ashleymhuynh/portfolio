@@ -53,7 +53,7 @@ const Biography = (props) => {
         </p>
         <div className="resume-container">
           <a
-            href="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:a2483a00-2a7f-46c7-8ea7-82b99426fcda"
+            href="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:88207c39-9e3c-4259-b063-595f0f149904"
             target="_blank"
             rel="noreferrer"
             className="resume"
