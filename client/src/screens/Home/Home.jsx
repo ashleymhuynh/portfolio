@@ -12,7 +12,7 @@ const Home = () => {
           alt="ashley logo"
         />
         <h2 className="home-header-text">
-          SOFTWARE ENGINEER | FULL-STACK DEVELOPER
+          WEB DEVELOPER | FULL STACK DEVELOPER
         </h2>
       </header>
       <div className="photo">
